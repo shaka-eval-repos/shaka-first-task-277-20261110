@@ -9,4 +9,7 @@ check() {
 }
 check 'Hello, world!'
 check 'Hello, Ada!' Ada
+check 'Hello, world' --plain
+check 'Hello, Ada' --plain Ada
+check 'Hello, Ada Lovelace' --plain 'Ada Lovelace'
 exit $fail

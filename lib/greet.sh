@@ -1,5 +1,10 @@
 #!/bin/sh
 # Prints a greeting for the given name.
 greet() {
-  printf 'Hello, %s!\n' "${1:-world}"
+  punctuation='!'
+  if [ "${1:-}" = '--plain' ]; then
+    punctuation=''
+    shift
+  fi
+  printf 'Hello, %s%s\n' "${1:-world}" "$punctuation"
 }
